@@ -1,1 +1,117 @@
-<h1>Hello world!</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Análisis de datos en baloncesto: incertidumbre y métodos de análisis.">
+    <title>Análisis de Datos en el Baloncesto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-top: 40px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 30px;
+        }
+
+        p {
+            margin: 20px 0;
+            font-size: 1.1em;
+        }
+
+        ul {
+            margin-left: 40px;
+            list-style: square;
+        }
+
+        code {
+            background-color: #e8e8e8;
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: #d63384;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #d63384;
+        }
+
+        .example {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 5px solid #0056b3;
+            margin: 20px 0;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Análisis de Datos en el Baloncesto</h1>
+        <p>En el mundo del baloncesto, el uso de datos se ha convertido en una herramienta fundamental para entender el juego y tomar decisiones estratégicas. Sin embargo, es importante recordar que los datos miden la <span class="highlight">incertidumbre</span>, pero no la eliminan. La incertidumbre es parte integral del deporte, y aunque distintos deportes presentan niveles diferentes de incertidumbre, ésta siempre está presente.</p>
+        
+        <p>Por ejemplo, si un modelo predice que al obtener <span class="highlight">30 rebotes</span> y tirar <span class="highlight">40 veces de dos</span>, tienes un <span class="highlight">80% de probabilidad</span> de ganar un partido, esa probabilidad sigue implicando incertidumbre, ya que es solo un porcentaje.</p>
+        
+        <h2>Fases en el Análisis de Datos en el Baloncesto</h2>
+
+        <h3>1. Recogida del dato</h3>
+        <p>Existen tres fuentes principales para la recogida de datos en baloncesto, que se diferencian en el tiempo de medida que comprenden. A continuación, se muestran ejemplos de cómo estos datos se han explotado en la investigación:</p>
+
+        <ul>
+            <li><span class="highlight">Boxscore</span>: Es un resumen de lo que ha ocurrido durante todo el partido. Para obtenerlo, es necesario medir durante toda la duración del partido. Artículos como [1] y [2] predicen las probabilidades de victoria utilizando datos de boxscore.</li>
+            <li><span class="highlight">Play-by-play</span>: Es una secuencia de las acciones ocurridas en el partido, donde cada acción está medida durante la posesión del equipo. Aquí se estudian las acciones en detalle.</li>
+            <li><span class="highlight">Tracking</span>: Descripción de las posiciones de los jugadores a lo largo del partido, midiendo solo en un instante. Permite un análisis más preciso de los movimientos.</li>
+        </ul>
+
+        <h3>2. Explotación del dato</h3>
+        <p>Tradicionalmente, se utilizaban técnicas de <span class="highlight">estadística descriptiva</span> (que describen los datos con métricas como la media o mediana), pero hoy en día se están adoptando técnicas más avanzadas de <span class="highlight">estadística predictiva</span>, como el <em>Machine Learning</em> o la <em>IA</em>.</p>
+
+        <div class="example">
+            <p><strong>Ejemplo práctico:</strong> En España, los equipos de baloncesto utilizan datos de play-by-play para generar un boxscore avanzado. Este boxscore muestra el uso (frecuencia) y el rendimiento (puntos obtenidos) en cada situación táctica del partido. Este es un claro ejemplo del uso de estadística descriptiva para entender cómo se ha jugado en el pasado.</p>
+        </div>
+
+        <p>Sin embargo, el siguiente reto es utilizar estadística predictiva para responder a preguntas como <span class="highlight">"¿Qué situaciones tácticas debemos jugar?"</span>. Aquí entra en juego el <span class="highlight">Maximum a posteriori estimation (MAP)</span>, una técnica que sugiere que se deberían jugar las tácticas con mayor eficiencia. Pero, la realidad es más compleja y la IA nos ayuda a modelar esas situaciones.</p>
+
+        <h2>Granularidad y Traducción Semántica</h2>
+        <p>Un reto clave en el análisis de datos en baloncesto es la <span class="highlight">granularidad</span> de las situaciones tácticas que se consideran. Se pueden analizar situaciones más generales del juego, que proporcionan mayor cantidad de datos y permiten acercarse más a la "verdadera" eficiencia. Sin embargo, analizar situaciones más específicas, como un bloqueo directo en una posición particular con jugadores concretos, ofrece más información aunque con menos ejemplos disponibles para medir.</p>
+
+        <footer>
+            &copy; 2024 Análisis de Datos en el Baloncesto - Todos los derechos reservados
+        </footer>
+    </div>
+</body>
+</html>
