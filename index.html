@@ -81,15 +81,15 @@
 </head>
 <body>
     <div class="content">
-        <h1>Análisis de Datos en el Baloncesto</h1>
-        <p>En el mundo del baloncesto, el uso de datos se ha convertido en una herramienta fundamental para entender el juego y tomar decisiones estratégicas. Sin embargo, es importante recordar que los datos miden la <span class="highlight">incertidumbre</span>, pero no la eliminan. La incertidumbre es parte integral del deporte, y aunque distintos deportes presentan niveles diferentes de incertidumbre, ésta siempre está presente.</p>
+        <h1>Un brevísimo resumen de los datos en el baloncesto</h1>
+        <p>En el mundo del baloncesto, el uso de datos se ha convertido en una herramienta fundamental para entender el juego y tomar decisiones estratégicas. Tal vez la idea más importante es que el uso de los datos permite medir la <span class="highlight">incertidumbre</span> del baloncesto, pero no la eliminan. La incertidumbre es parte íntrinseca del deporte. De hecho, distintos deportes presentan niveles diferentes de incertidumbre.</p>
         
-        <p>Por ejemplo, si un modelo predice que al obtener <span class="highlight">30 rebotes</span> y tirar <span class="highlight">40 veces de dos</span>, tienes un <span class="highlight">80% de probabilidad</span> de ganar un partido, esa probabilidad sigue implicando incertidumbre, ya que es solo un porcentaje.</p>
+        <p>Por ejemplo, un modelo estadístico dice que tienes una probabilidad de <span class="highlight">80%</span> de ganar un partido. Esta afirmación implica incertidumbre, ya que existe la posibilidad de tanto de ganar como de perder el partido.</p>
         
         <h2>Fases en el Análisis de Datos en el Baloncesto</h2>
 
         <h3>1. Recogida del dato</h3>
-        <p>Existen tres fuentes principales para la recogida de datos en baloncesto, que se diferencian en el tiempo de medida que comprenden. A continuación, se muestran ejemplos de cómo estos datos se han explotado en la investigación:</p>
+        <p>Existen tres fuentes principales para la recogida de datos en baloncesto, que se diferencian en el tiempo de medida que comprenden. A continuación, se muestran ejemplos de cómo estos datos se han explotado en diferentes artículos científicos</p>
 
         <ul>
             <li><span class="highlight">Boxscore</span>: Es un resumen de lo que ha ocurrido durante todo el partido. Para obtenerlo, es necesario medir durante toda la duración del partido. Artículos como [1] y [2] predicen las probabilidades de victoria utilizando datos de boxscore.</li>
@@ -98,19 +98,21 @@
         </ul>
 
         <h3>2. Explotación del dato</h3>
-        <p>Tradicionalmente, se utilizaban técnicas de <span class="highlight">estadística descriptiva</span> (que describen los datos con métricas como la media o mediana), pero hoy en día se están adoptando técnicas más avanzadas de <span class="highlight">estadística predictiva</span>, como el <em>Machine Learning</em> o la <em>IA</em>.</p>
+        <p>Tradicionalmente, se utilizaban técnicas de <span class="highlight">estadística descriptiva</span> (que describen los datos pasados con métricas como la media o mediana), pero hoy en día se están adoptando técnicas más avanzadas de <span class="highlight">estadística predictiva</span>, como el <em>Machine Learning</em> o la <em>IA</em>.</p>
 
         <div class="example">
             <p><strong>Ejemplo práctico:</strong> En España, los equipos de baloncesto utilizan datos de play-by-play para generar un boxscore avanzado. Este boxscore muestra el uso (frecuencia) y el rendimiento (puntos obtenidos) en cada situación táctica del partido. Este es un claro ejemplo del uso de estadística descriptiva para entender cómo se ha jugado en el pasado.</p>
+            <img src="advanced boxscore.png" />
+            <p>En este ejemplo, es un reto la granularidad de situaciones que consideras. Puedes considerar situaciones generales del juego (tendrás más ejemplos para medir y acercarte a la verdadera eficiencia o uso - igual que cuando tiras una moneda, cuantas más veces la tires, más te acercarás a la probabilidad real de que salga cara) o considerar situaciones más concretas (en las que no te acercarás a la verdadera eficiencia o uso pero te darán más información). Por ejemplo, no es lo mismo considerar bloqueo directo (en general), que bloqueo directo desde tal posición del campo con el jugador 1 y el jugador 2 (te dará más información pero el número de veces que ha ocurrido en el pasado es menor). </p>
+            <p>A esto se le llama <span class="highlight">traducción semántica</span> y es cómo transformas la realidad (el baloncesto) a datos. Es uno de los grandes retos de trabajar con el dato en cualquier ámbito. </p>
         </div>
 
-        <p>Sin embargo, el siguiente reto es utilizar estadística predictiva para responder a preguntas como <span class="highlight">"¿Qué situaciones tácticas debemos jugar?"</span>. Aquí entra en juego el <span class="highlight">Maximum a posteriori estimation (MAP)</span>, una técnica que sugiere que se deberían jugar las tácticas con mayor eficiencia. Pero, la realidad es más compleja y la IA nos ayuda a modelar esas situaciones.</p>
 
-        <h2>Granularidad y Traducción Semántica</h2>
-        <p>Un reto clave en el análisis de datos en baloncesto es la <span class="highlight">granularidad</span> de las situaciones tácticas que se consideran. Se pueden analizar situaciones más generales del juego, que proporcionan mayor cantidad de datos y permiten acercarse más a la "verdadera" eficiencia. Sin embargo, analizar situaciones más específicas, como un bloqueo directo en una posición particular con jugadores concretos, ofrece más información aunque con menos ejemplos disponibles para medir.</p>
+        <h2>Estadística descriptiva vs. predictiva</h2>
+        <p>El ejemplo anterior utiliza estadística descriptiva, ya que describe cómo ha jugado un equipo en el pasado. Se podría pasar a métodos de estadística predictiva si nos hacemos la pregunta: "¿Qué situaciones tácticas hay que jugar?" La respuesta inmediata es "las que tengan mayor eficiencia". Este es el método de estadística predictiva más simple y se llama Maximum a posteriori estimation (MAP - en inglés). La realidad es que no podemos jugar siempre las jugadas con mayor eficiencia, y tener en cuenta esto, es la motivación para usar herramientas más complejas como la IA. </p>
 
         <footer>
-            &copy; 2024 Análisis de Datos en el Baloncesto - Todos los derechos reservados
+            &copy; 2024 Javier Sanguino
         </footer>
     </div>
 </body>
