@@ -1,42 +1,112 @@
-<h1>Algunos ejemplos del uso de datos en el baloncesto</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplos del uso de datos en el baloncesto y su aplicación en análisis táctico.">
+    <title>Algunos Ejemplos del Uso de Datos en el Baloncesto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
 
-<p>El uso del dato ha revolucionado el deporte en los últimos años: desde el análisis táctico al <em>fan engagement</em>, muchas de las decisiones que se toman
-a día de hoy en los despachos de los clubes deportivos están apoyadas en datos. En este artículo repasaremos algunos ejemplos del uso del dato en
-el análisis táctico de un partido de baloncesto. Para entender los conceptos relacionados, se recomendienda la lectura de <a href="index.html">este artículo</a>.</p>
+        h1, h2, h3 {
+            color: #0056b3;
+        }
 
+        h1 {
+            font-size: 2.5em;
+        }
 
-En la fase de recogida del dato, hay varios proveedores.
+        h2 {
+            font-size: 2em;
+            margin-top: 40px;
+        }
 
-- Sistemas implementados por la propia liga: en el pasado era más común que las ligas lo implementaran con sus propios recursos, pero la necesidad de profesionalizarlo
-y de obtener datos más complejos ha hecho que ya la mayoría de ligas contraten a empresas (<em>outsourcing</em>) con más experiencia. En resumen, las necesidades actuales
-han sobrepasado las competencias que tienen las ligas. En general, las ligas implementan estos sistemas para ponerlos a disposición de sus equipos y los equipos son los que se 
-dedican a explotarlos. Se ha pasado de ejemplos como la recogida de datos de boxscore en directo (<a href="http://baloncestoenvivo.feb.es/centroinformacion/home.html">implementado por la propia FEB en 2005</a>)
-a ejemplos como la implementación de la recogida de datos de tracking en la NBA, <a href="https://bleacherreport.com/articles/1764278-nba-to-install-sportvu-system-in-arenas-for-2013-14-and-improve-player-tracking">
-realizada por SportVU en 2012 por 100.000$ por pabellón </a> (3 millones de dolares en total). La utilidad del uso del dato en la actualidad ha hecho que la valoración de estas empresas
-crezca de manera exponencial. Desde 2012, ha habido tres empresas que proveian datos de tracking a la NBA: SportVU, Second Spectrum y Hawk-eye. 
-<a href="https://www.cbsnews.com/news/sports-data-firm-stats-acquires-sportvu-provider-of-cnns-hologram-tech/">SportsVU fue comprada por Stats perfrom por decenas de millones de euros en 2008</a>;
-<a href="https://www.ft.com/content/7039b836-4801-11e0-b323-00144feab49a">Hawk-eye por Sony en 2011 por un valor estimado de 32 millones de dólares</a> 
-y <a href="https://www.nbastuffer.com/analytics101/second-spectrum/">Second Spectrum por Genius Sports por 200 millones de dolares en 2021</a>.
+        h3 {
+            font-size: 1.5em;
+            margin-top: 30px;
+        }
 
-- Proveedores externos a la liga: son empresas que contratan los equipos para obtener datos. En estos casos, pequeñas empresas que empiezan a 
-tener una cuota de mercado aceptable son adquiridas por empresas más grandes. Estas adquisiciones han aumentado en los últimos años. Por ejemplo,
-<a href="https://tracxn.com/d/acquisitions/acquisitions-by-hudl/__zT6NFD22JT0ZbWHbFMWBxS4fNzOEZSuubOouLm9SgLo">Hudl desde 2022 ha comprado 4 empresas </a>,
-algunas de ellas como StatsPerform o Instat eran ya bastante grandes, por lo que se presupone que el dinero invertido en estas adquisiciones ha aumentado
-considerablemente. 
+        p {
+            margin: 20px 0;
+            font-size: 1.1em;
+        }
 
+        ul {
+            margin-left: 40px;
+            list-style: square;
+        }
 
-En la fase de explotación del dato:
+        code {
+            background-color: #e8e8e8;
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: #d63384;
+        }
 
-Cabe mencionar que el incremento de la cantidad de datos, el refinamiento de la precisión de ellos y la adquisición de distintos tipos de datos (de boxscore a play-by-play a tracking),
-ha hecho que haya nuevos casos de uso del datos en la fase de explotación (análisis táctico). Se ha pasado tareas de estadística descriptiva (¿cuántos rebotes cojo en un partido de media?) a 
-tareas de estadística predictiva (¿ganaré el partido cogiendo x cantidad de rebotes?). Este fenómeno se puede ver claramente en el tipo de papers que se publican en las conferencias científicas
-de referencia en el campo como son el <a href="https://www.sloansportsconference.com"><em>MIT Sloan Sports Conference</em></a> en EEUU 
-o el <a href="https://dtai.cs.kuleuven.be/events/MLSA24/"><em>Machine Learning for Sports Analytics Workshop</em></a> en Europa
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-El hecho de que en la actualidad haya más datos disponibles por el aumento del número de partidos ha hecho que herramientas de <em>big data</em>
-como <em>Machine Learning</em> que antes no se podían utilizar por no haber suficiente cantidad de datos, ahora estén a la orden del día.
+        .highlight {
+            font-weight: bold;
+            color: #d63384;
+        }
 
-Típicamente, es el propio equipo deportivo el que explota el dato, ya que es el momento en el que se pueden dar más ventajas competitivas. Es por esto 
-por lo que el número de personas encargadas del analísis táctico usando datos en los equipos de baloncesto ha crecido en los últimos años. Por ejemplo,
-en la NBA en 2009 se estima que había 13 personas (podían ser consultores externos) que se dedicaban a hacer análisis táctico basado en datos, mientras que en 2024 son
-se estima que son 227 con puestos en la propia organización (fuente: <a href="https://www.nbastuffer.com/analytics101/nba-teams-that-have-analytics-department/">nbastuffer</a>). 
+        .example {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 5px solid #0056b3;
+            margin: 20px 0;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        .author {
+            text-align: right;
+            font-style: italic;
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Algunos ejemplos del uso de datos en el baloncesto</h1>
+        <p>El uso del dato ha revolucionado el deporte en los últimos años: desde el análisis táctico al <em>fan engagement</em>, muchas de las decisiones que se toman a día de hoy en los despachos de los clubes deportivos están apoyadas en datos. En este artículo repasaremos algunos ejemplos del uso del dato en el análisis táctico de un partido de baloncesto. Para entender los conceptos relacionados, se recomienda la lectura de <a href="index.html">este artículo</a>.</p>
+
+        <h2>Fase de Recogida del Dato</h2>
+        <ul>
+            <li><span class="highlight">Sistemas implementados por la propia liga</span>: En el pasado era más común que las ligas lo implementaran con sus propios recursos, pero la necesidad de profesionalizarlo y de obtener datos más complejos ha hecho que ya la mayoría de ligas contraten a empresas (<em>outsourcing</em>) con más experiencia. La implementación de sistemas de seguimiento en la NBA es un buen ejemplo. <a href="https://bleacherreport.com/articles/1764278-nba-to-install-sportvu-system-in-arenas-for-2013-14-and-improve-player-tracking">SportVU, contratado en 2012, con un coste de 100.000$ por pabellón</a> es un ejemplo claro del impacto del dato. Desde 2012, tres empresas han sido proveedoras de datos de tracking en la NBA: SportVU, Second Spectrum y Hawk-eye.</li>
+            <li><span class="highlight">Proveedores externos a la liga</span>: Son empresas que contratan los equipos para obtener datos. Estas adquisiciones han aumentado en los últimos años. Por ejemplo, <a href="https://tracxn.com/d/acquisitions/acquisitions-by-hudl/__zT6NFD22JT0ZbWHbFMWBxS4fNzOEZSuubOouLm9SgLo">Hudl desde 2022 ha comprado 4 empresas</a>, algunas de ellas como StatsPerform o Instat eran ya bastante grandes, por lo que se presupone que el dinero invertido en estas adquisiciones ha aumentado considerablemente.</li>
+        </ul>
+
+        <h2>Fase de Explotación del Dato</h2>
+        <p>El incremento de la cantidad y precisión de los datos, así como la adquisición de distintos tipos de datos (de boxscore a play-by-play a tracking), ha permitido el desarrollo de nuevas aplicaciones en el análisis táctico. Se ha pasado de realizar estadísticas descriptivas (¿cuántos rebotes cojo en un partido de media?) a predictivas (¿ganaré el partido cogiendo cierta cantidad de rebotes?). Este fenómeno se refleja en los artículos presentados en conferencias científicas de prestigio en este campo como la <a href="https://www.sloansportsconference.com"><em>MIT Sloan Sports Conference</em></a> en EEUU y el <a href="https://dtai.cs.kuleuven.be/events/MLSA24/"><em>Machine Learning for Sports Analytics Workshop</em></a> en Europa.</p>
+
+        <p>El crecimiento de los datos disponibles por el aumento del número de partidos ha facilitado el uso de herramientas de <em>big data</em> como <em>Machine Learning</em>, que antes no se podían aplicar por la falta de suficientes datos. Típicamente, es el propio equipo deportivo el que explota el dato, ya que es el momento en el que se pueden dar más ventajas competitivas. Esto ha provocado un aumento en el número de personas encargadas del análisis táctico usando datos en los equipos de baloncesto. En la NBA, en 2009 se estimaba que había 13 personas dedicadas al análisis táctico basado en datos, mientras que en 2024 se estima que son 227 con puestos en la propia organización (fuente: <a href="https://www.nbastuffer.com/analytics101/nba-teams-that-have-analytics-department/">nbastuffer</a>).</p>
+
+        <div class="author">Por Javier Sanguino Baustiste</div>
+
+        <footer>
+            &copy; 2024 Javier Sanguino
+        </footer>
+    </div>
+</body>
+</html>
